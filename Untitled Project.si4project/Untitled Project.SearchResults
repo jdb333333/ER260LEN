@@ -1,0 +1,30 @@
+---- jdb2018 Matches (29 in 7 files) ----
+Fixed.c (ER260_China\EOSCLCD) line 26 : extern void PrintSaveStr(void);//jdb2018-08-21
+Fixed.c (ER260_China\EOSCLCD) line 576 : 				PrintSaveStr();//jdb2018-08-21 打印保存的文本
+Flowbill.c (ER260_China\EOSCLCD) line 13 : //jdb2018-08-22 打印票据文本流水
+Flowbill.c (ER260_China\EOSCLCD) line 47 : void DispRECEIPT(void);//jdb2018-08-20 显示打印票据
+Flowbill.c (ER260_China\EOSCLCD) line 89 :     {sizeof(struct CDC_RECEIPT),         &DispRECEIPT},         //jdb2018-08-20 显示打印票据
+Read_Flow in Flowbill.c (ER260_China\EOSCLCD) : 		//jdb2018-08-22 打印票据文本流水
+Flowbill.c (ER260_China\EOSCLCD) line 406 : //jdb2018-08-20 保存票据内容
+Flowbill.c (ER260_China\EOSCLCD) line 1094 : //jdb2018-08-20 显示打印票据
+LoadReceipLog in Flowbill.c (ER260_China\EOSCLCD) :         case RECEIPTLOG://jdb2018-08-23 增加打印票据文本功能
+LoadReceipLog in Flowbill.c (ER260_China\EOSCLCD) : 				if (sFunc==TENDLOG || sFunc == RECEIPTLOG)//jdb2018-08-23 增加打印票据文本功能
+flowbill.h (ER260_China\EOSCLCD) line 72 : #define  RECEIPTLOG		28		//jdb2018-08-22 打印票据文本
+flowbill.h (ER260_China\EOSCLCD) line 80 : #define  LOGTYPEMAX  	28      //jdb2018-07-22 增加打印票据文本
+flowbill.h (ER260_China\EOSCLCD) line 97 : #define LOGALARMON	2048     // 当剩余空间少于此值，报警 //jdb2018-08-22
+flowbill.h (ER260_China\EOSCLCD) line 130 : //jdb2018-08-20 增加票据流水【纯文本】
+FLOWREC in flowbill.h (ER260_China\EOSCLCD) :     struct CDC_RECEIPT			 CDC_Receipt;				//jdb2018-08-20 receipt print info
+flowbill.h (ER260_China\EOSCLCD) line 464 : short Receipt_Data(BYTE cmd);//jdb2018-08-20
+General.c (ER260_China\EOSCLCD) line 6 : extern BYTE PrBuffer[];//jdb2018-08-21
+General.c (ER260_China\EOSCLCD) line 628 : 		Receipt_Data(REGISLOG);//jdb2018-08-20打印票据开始信息
+Gprs.c (ER260_China\EOSCLCD) line 6 : #define GPRSSENDTXT //jdb2018-08-27发送一张票据
+Gprs.c (ER260_China\EOSCLCD) line 1212 : #ifdef GPRSSENDTXT //jdb2018-08-27 发送纯文本数据
+Main.c (ER260_China\EOSCLCD) line 12 : //jdb2018-08-21 保存打印文本
+Main.c (ER260_China\EOSCLCD) line 900 : 				SavePrintStr(TESTBIT(ApplVar.PrintLayOut,BIT2)?CMDP_DR:CMDP_R, Line);//jdb2018-08-21 保存打印文本
+Main.c (ER260_China\EOSCLCD) line 905 : 				SavePrintStr(TESTBIT(ApplVar.PrintLayOut,BIT2)?CMDP_DR:CMDP_R, spacebuf);//jdb2018-08-21 保存打印文本
+Print.c (ER260_China\EOSCLCD) line 8 : BYTE	PrBuffer[2000];//jdb2018-08-21 保存打印文本
+Print.c (ER260_China\EOSCLCD) line 9 : BYTE	PrBuffer2[2000];//jdb2018-08-21 保存打印文本
+Print.c (ER260_China\EOSCLCD) line 386 : //jdb2018-08-21 打印保存的文本
+Print.c (ER260_China\EOSCLCD) line 453 : //jdb2018-08-21 保存打印文本
+Print.c (ER260_China\EOSCLCD) line 1257 : 			//jdb2018-08-21 初始化BUFFER
+Print.c (ER260_China\EOSCLCD) line 1261 : 			Receipt_Data(RECEIPTLOG);//jdb2018-08-22 打印票据文本结束
